@@ -6,6 +6,7 @@ body
 {
     width: 80%;
     border: thick solid #000;
+    height: 405px;
 }
 #oldalmenu
 {
@@ -34,22 +35,18 @@ body
     position: relative;
     border-radius: 10px;
 }
-#ckep
-{
-    position: absolute;
-    left : 8%;
-    bottom : 50%;
-    top : 50%;
-    border: thick solid orange;
+#ckep {
+    width: 300px;
+}
+
+#ckep img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 #adatok
 {
     position: absolute;
     right : 30%;
-    top : 5%;
-}
-img
-{
-    width: 65%;
-    height: 65%;
+    top : 1%;
 }
