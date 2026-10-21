@@ -284,3 +284,25 @@ body {
     left: 50%;
     background-image: url("../images/locations/erdo.png");
 }
+/*-------------------Shop--------------------------*/
+.shopContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    min-height: 25vh;
+    gap: 20px;
+}
+.shopKartya {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopKartya:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+    cursor: pointer;
+}
