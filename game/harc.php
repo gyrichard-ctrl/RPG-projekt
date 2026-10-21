@@ -51,6 +51,10 @@ require_once '../includes/layout_start.php';
 </p>
 <p>Élete:<?php echo $monster['hp']; ?></p>
 <p>Sebzése:<?php echo $monster['dmg']; ?></p>
+<hr><hr>
+<div>
+    <?php include "harcLogika.php"; ?>
+</div>
 
 <?php
 require_once '../includes/layout_end.php';

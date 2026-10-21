@@ -306,3 +306,6 @@ body {
     scale: 1.05;
     cursor: pointer;
 }
+.shopKartya img {
+    width: 60%;
+}
