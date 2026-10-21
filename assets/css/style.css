@@ -1,0 +1,286 @@
+
+/* Alapbeállítások */
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+ 
+    background-color: #17130f;
+    background-image:
+        radial-gradient(
+            ellipse at top,
+            #403326 0%,
+            #17130f 75%
+        );
+
+}
+
+/*
+########## Keret beállítása ##########
+*/
+/* Teljes oldal: oldalsáv + jobb oldali rész */
+.layout {
+    display: grid;
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 10px;
+
+    min-height: 100vh;
+    padding: 32px;
+}
+
+/* BAL OLDALI SÁV */
+.sidebar {
+    border: 3px solid black;
+    padding: 12px;
+	background-color: #a17a50;
+    background-image:
+        repeating-linear-gradient(
+            92deg,
+            transparent 0px,
+            #67432822 8px,
+            #e4bb7a33 22px,
+            transparent 242px
+        ),
+        linear-gradient(
+            90deg,
+            #745032,
+            #bd9564 40%,
+            #a67b4e 75%,
+            #745032
+        );
+	border-radius: 0 20px 20px 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding-top: 24px;
+}
+
+/* JOBB OLDALI RÉSZ */
+.content-layout {
+    display: grid;
+    grid-template-rows: 80px minmax(0, 1fr);
+    gap: 10px;
+
+    min-width: 0;
+}
+
+/* FELSŐ NAVIGÁCIÓ */
+.topbar {
+    border: 3px solid black;
+    padding: 8px;
+	background-color: #352519;
+    background-image:
+        linear-gradient(
+             90deg,
+            #745032,
+            #bd9564 40%,
+            #a67b4e 75%,
+            #745032
+        );
+	border-radius: 0 0 20px 20px;
+}
+
+.topbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    height: 100%;
+}
+/* MENÜSTÍLUS */
+.topbar-nav a{
+	display: inline-block;
+    padding: 8px 12px;
+
+    border: 3px solid black;
+    border-radius: 12px;
+
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+	background:
+        linear-gradient(
+            145deg,
+            #f1dfb6,
+            #c9a774
+        );
+}
+
+.sidebar-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+
+    border: 3px solid black;
+    border-radius: 12px;
+
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+	
+    background:
+        linear-gradient(
+            145deg,
+            #f1dfb6,
+            #c9a774
+        );
+}
+
+/* Egér ráhúzásakor */
+.sidebar-nav a:hover {
+	background:
+        linear-gradient(
+            145deg,
+            #aaaaaa,
+            #cccccc
+        );
+    
+}
+.topbar-nav a:hover {
+    background:
+        linear-gradient(
+            145deg,
+            #aaaaaa,
+            #cccccc
+        );
+}
+
+/* VÁLTOZÓ TARTALOM */
+.main-content {
+    border: 3px solid black;
+    padding: 24px;
+
+    min-width: 0;
+    min-height: 0;
+
+    background-color: #d4bc8c;
+    background-image:
+        radial-gradient(
+            ellipse at center,
+            #ead8ac 0%,
+            #d4bc8c 65%,
+            #aa8656 100%
+        );
+	border-radius: 20px 0 20px 0;
+}
+
+/* Kisebb képernyők */
+@media (max-width: 650px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
+    .content-layout {
+        grid-template-rows: auto minmax(400px, 1fr);
+        gap: 20px;
+    }
+
+    .topbar {
+        min-height: 64px;
+    }
+
+    .topbar-nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+
+/*
+########## Aloldalak ##########
+*/
+/*önök csinálták*/
+
+#sheet_character
+{
+    position: relative;
+    border-radius: 10px;
+}
+#sheet_ckep {
+    width: 300px;
+}
+
+#sheet_ckep img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#sheet_adatok
+{
+    position: absolute;
+    right : 30%;
+    top : 1%;
+}
+
+/* Map */
+
+
+
+.vilagterkep {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.terkep {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.helyszin {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 1 / 1;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+	
+    background-color: transparent;
+
+    border: none;
+    cursor: pointer;
+
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s;
+}
+
+.helyszin:hover {
+	
+    transform: translate(-50%, -50%) scale(1.5);	
+    z-index: 10;
+}
+
+/* Mocsár */
+.mocsar {
+    top: 30%;
+    left: 54%;
+    background-image: url("../images/locations/mocsar.png");
+	
+}
+
+/* Erdő */
+.erdo {
+    top: 70%;
+    left: 50%;
+    background-image: url("../images/locations/erdo.png");
+}
