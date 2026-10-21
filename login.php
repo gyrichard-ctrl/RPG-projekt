@@ -32,6 +32,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
      //Vizsgálat a POST-ban elküldött adatok egyeznek e az adatbázisban lévőkkel 
         if($username === $user['name'] && $password === $user['password']){
             $_SESSION["nev"] = $_POST["felhasznNev"];
+            $_SESSION["maxHp"] = $user['maxHp'];
+            $_SESSION["actualHp"] = $user['actualHp'];
+            $_SESSION["atkDmg"] = $user['atkDmg'];
+            $_SESSION["ac"] = $user['ac'];
+
+            $_SESSION["level"] = $user['ac'];
+            $_SESSION["exp"] = $user['ac'];
+            $_SESSION["money"] = $user['ac'];
 
             //Átirányítjuk a belső oldalra 
             header("Location: game/belso.php");
